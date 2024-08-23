@@ -5,7 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        primary: ['Work Sans', 'Sans-Serif']
+      },
+      colors: {
+        purple: {
+          grayish: '#f9f0ff',
+          dark: '#2f1533'
+        },
+        pink: {
+          light: '#f9f0ff'
+        }
+      }
+    },
   },
   plugins: [],
 }
