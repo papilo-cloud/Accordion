@@ -1,4 +1,4 @@
-import type {Ref, SVGProps } from "react"
+import type {SVGProps } from "react"
 
 const IconMinus = (props:SVGProps<SVGPathElement>) => {
   return (
