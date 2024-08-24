@@ -5,8 +5,8 @@ import IconPlus from '../../../icons/IconPlus'
 
 interface Props extends ComponentProps<'button'> {
     showIcon: boolean,
-    minusIconFill: string,
-    plusIconFill: string
+    minusIconFill?: string,
+    plusIconFill?: string
 }
 
 const DisplayButton = ({
@@ -20,7 +20,7 @@ const DisplayButton = ({
         let active = myRef.current?.nextElementSibling as HTMLElement
 
         if (active.style.maxHeight == '0px') {
-            active.style.maxHeight = active.scrollHeight + 'px'
+            active.style.maxHeight = active.scrollHeight+ 'px'
         } else {
             active.style.maxHeight = '0px'
         }
@@ -28,16 +28,18 @@ const DisplayButton = ({
     }
 
   return (
-    <button className={clsx(' flex gap-4', className)} 
+    <button className={clsx('text-base font-semibold w-full flex justify-between items-center text-start gap-3', className)} 
         onClick={handleClick}
         ref={myRef}>
             {children}
+            <div>
             { showIcon &&
                 (
-                    isActive ? <IconMinus className={clsx(minusIconFill &&' fill-inherit')} />:
-                        <IconPlus fill={plusIconFill} />
+                    isActive ? <IconMinus fill={minusIconFill ?? '#301534'} />:
+                        <IconPlus fill={plusIconFill ?? '#AD28EB'} />
                 )
             }
+            </div>
 
     </button>
   )
