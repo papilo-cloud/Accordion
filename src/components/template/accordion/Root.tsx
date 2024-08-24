@@ -7,7 +7,7 @@ interface RootProps extends ComponentProps<'div'> {
 
 const Root = ({children, className, ...props}: RootProps) => {
   return (
-    <div className={clsx(' text-red-500', className) }{...props}>
+    <div className={clsx(' bg-white max-[550px]:w-full w-[500px] p-5 rounded-xl flex flex-col gap-5 shadow-md', className) }{...props}>
         {children}
     </div>
   )
