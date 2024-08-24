@@ -1,7 +1,6 @@
 // import IconMinus from "./components/icons/IconMinus"
 import clsx from "clsx"
 import Accordion from "./components/template"
-import IconStar from "./components/icons/IconStar"
 
 function App() {
 
