@@ -28,7 +28,7 @@ const DisplayButton = ({
     }
 
   return (
-    <button className={clsx('text-base font-semibold w-full flex justify-between items-center text-start gap-3', className)} 
+    <button className={clsx('text-base font-semibold w-full flex justify-between items-center text-start gap-3 hover:text-[#AD28EB]', className)} 
         onClick={handleClick}
         ref={myRef}>
             {children}
