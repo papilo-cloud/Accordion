@@ -8,7 +8,7 @@ const ContentText: React.FC<ComponentProps<'div'>> = ({children, className, ...p
         transition: ' .2s ease-out',
         overflow: 'hidden'
     }}
-    className={clsx('', className)} {...props}>
+    className={clsx('text-sm mb-5 text-opacity-70 text-purple-dark font-normal', className)} {...props}>
         {children}
     </div>
   )
