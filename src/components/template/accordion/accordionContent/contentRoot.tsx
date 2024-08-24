@@ -1,19 +1,19 @@
 import clsx from 'clsx'
-import React, { ComponentProps, ReactNode, useRef, useState } from 'react'
+import { ComponentProps, ReactNode} from 'react'
 import DisplayButton from './DisplayButton'
 import ContentText from './contentText'
 
 
 interface contentProps extends ComponentProps<'div'> {
     showIcon: boolean,
-    minusIconFill: string,
-    plusIconFill: string
+    minusIconFill?: string,
+    plusIconFill?: string
 }
 
 const ContentRoot= ({className, children, showIcon=true, minusIconFill, plusIconFill, ...props}: contentProps) => {
 
     return (
-        <div className={clsx('', className)} {...props}>
+        <div className={clsx(' flex flex-col gap-3 border-b-2 border-purple-grayish', className)} {...props}>
             <DisplayButton showIcon={showIcon} 
                 minusIconFill={minusIconFill}
                 plusIconFill={plusIconFill}>
