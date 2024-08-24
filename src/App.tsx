@@ -8,7 +8,7 @@ function App() {
   return (
     <div className={clsx('bg-pink-light min-h-screen flex flex-col justify-center items-center p-4')}>
         <Accordion.Root>
-            <Accordion.Heading logo={<IconStar />}>
+            <Accordion.Heading >
               <h1>faq<span className="lowercase">s</span></h1>
             </Accordion.Heading>
 
