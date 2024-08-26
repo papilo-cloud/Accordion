@@ -20,4 +20,7 @@ The users should be able to:
         </Accordion.Items>
     </Accordion.Root>
 ```
+
+### Image
+![image](./public/assets/images/screenshot.jpg)
     
