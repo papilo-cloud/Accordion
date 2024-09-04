@@ -15,7 +15,7 @@ const DisplayButton = ({
     }: Props) => {
 
     const [isActive, setIsActive] = useState<boolean>(false)
-    const myRef = useRef<HTMLButtonElement>(null!)
+    const myRef = useRef<HTMLDivElement>(null!)
 
     function handleClick() {
         let active = myRef.current?.nextElementSibling as HTMLElement
@@ -26,11 +26,11 @@ const DisplayButton = ({
             active.style.maxHeight = '0px'
         }
         setIsActive(!isActive)
-        console.log(active)
+        // console.log(active)
     }
 
   return (
-    <button className={clsx('text-purple-dark text-base font-semibold w-full flex justify-between items-center text-start gap-3 hover:text-[#AD28EB]', className)} 
+    <div className={clsx('text-purple-dark cursor-pointer text-base font-semibold w-full flex justify-between items-center text-start gap-3 hover:text-[#AD28EB]', className)} 
         onClick={handleClick}
         ref={myRef}>
             {children?? <span>Content header</span> }
@@ -43,7 +43,7 @@ const DisplayButton = ({
             }
             </span>
 
-    </button>
+    </div>
   )
 }
 
