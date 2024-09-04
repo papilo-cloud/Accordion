@@ -26,21 +26,22 @@ const DisplayButton = ({
             active.style.maxHeight = '0px'
         }
         setIsActive(!isActive)
+        console.log(active)
     }
 
   return (
     <button className={clsx('text-purple-dark text-base font-semibold w-full flex justify-between items-center text-start gap-3 hover:text-[#AD28EB]', className)} 
         onClick={handleClick}
         ref={myRef}>
-            {children?? <p>Content header</p> }
-            <div>
+            {children?? <span>Content header</span> }
+            <span>
             { showIcon &&
                 (
                     isActive ? <IconMinus fill={minusIconFill ?? '#301534'} />:
                         <IconPlus fill={plusIconFill ?? '#AD28EB'} />
                 )
             }
-            </div>
+            </span>
 
     </button>
   )
